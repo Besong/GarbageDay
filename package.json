@@ -1,0 +1,27 @@
+{
+  "name": "garbageday",
+  "version": "1.0.0",
+  "description": "A garbage collection application that informs the city of Corner Brook, NL about the next garbage/recycling schedule day.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Besong/GarbageDay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Besong/GarbageDay/issues"
+  },
+  "homepage": "https://github.com/Besong/GarbageDay#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  }
+}
