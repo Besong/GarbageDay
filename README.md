@@ -39,8 +39,11 @@ node app.js
 ## 🌍 Where is GarbageDay data from?
 
 GarbageDay is built to work with garbage collection data from the City of Corner Brook GIS Hub:
-👉 [Corner Brook GIS Hub](https://city-of-corner-brook-gis-hub-ccbrook.hub.arcgis.com/apps/9c5ca2b7d7be49d788cc2df4aabdaae5/explore)
+👉 [Corner Brook GIS Hub](https://city-of-corner-brook-gis-hub-ccbrook.hub.arcgis.com/apps/9c5ca2b7d7be49d788cc2df4aabdaae5/explore).
+
+The dataset is stored in JSON format inside the db/data folder. Review it to understand the structure of the data.
 
 ## ⚠️ Note
-> _GarbageDay was designed to work with the 2026 garbage collection data._
-The dataset is stored in JSON format inside the db/data folder. Review it to understand the structure of the data.
+> _GarbageDay was designed to work with the 2026 garbage collection data._ 
+
+
