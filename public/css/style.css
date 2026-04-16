@@ -1,0 +1,125 @@
+:root {
+  --bg: #F4F7F3;
+  --garbage: #A3BFA0;
+  --recycling: #E6AFA2;
+  --info: #C97C8C;
+  --text-dark: #6D4C57;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.date {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Search */
+.search-box {
+  margin: 20px 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Cards */
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+/* Section Colors */
+.garbage {
+  background: var(--garbage);
+}
+
+.recycling {
+  background: var(--recycling);
+}
+
+.info {
+  background: var(--info);
+}
+
+/* Highlight Text */
+.highlight {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 600px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .highlight {
+    font-size: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date {
+    margin-top: 5px;
+  }
+}

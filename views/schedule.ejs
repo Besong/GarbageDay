@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CB - Garbage Collection Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <h1 class="title">Welcome to Garbage Day</h1>
+        <p class="subtitle">Enter your address to check your garbage and recycling schedule.</p>
+      </div>
+      <div class="date">
+        <%= currentDate %>
+      </div>
+    </div>
+
+    <!-- Search -->
+     <div class="search-box">
+      <form method="GET" action="/">
+        <input 
+          type="text" 
+          name="address" 
+          placeholder="e.g... 1 BLANCHARDS AVE"
+          value="<%= typeof address !== 'undefined' ? address : '' %>"
+          required
+          autofocus
+        >
+        <!-- Hidden submit button ensures Enter always works -->
+        <button type="submit" style="display: none;"></button>
+
+      </form>
+    </div>
+
+    <!-- Garbage Section -->
+    <div class="card garbage">
+      <h2>Garbage Collection</h2>
+
+      <p class="highlight">
+        <%= isGarbageDay ? "Yes - Today is Garbage Day" : "No - Today is not Garbage Day" %>
+      </p>
+
+      <p>Next Pickup: <%= nextPickup %></p>
+    </div>
+
+    <!-- Recycling Section -->
+    <div class="card recycling">
+      <h2>Recycling Information</h2>
+
+      <p class="highlight">
+        <%= isGarbageDay ? "Today you recycle" : "Next recycling day: " + nextPickup %>
+      </p>
+
+      <p>Recycling Type: <%= recyclingType %></p>
+      <p>Special Pick Up: <%= specialPickup || "None" %></p>
+    </div>
+
+    <!-- Info Section -->
+    <div class="card info">
+      <h2>Take Note</h2>
+
+      <p>Recycling must be in blue bags. Garbage must be in clear bags.</p>
+      <p>Place both bags in your pickup bins by 8AM to ensure collection.</p>
+    </div>
+
+  </div>
+  <script src="/js/localQueries.js"></script>
+</body>
+</html>
